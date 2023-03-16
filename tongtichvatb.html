@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập mảng cần tính<br>
+<input type="text" id="nhap">
+<button onclick="tongtichtb()">Tính</button>
+<p id="ketqua"></p>
+<script>
+    function tongtichtb() {
+        let n = document.getElementById("nhap").value;
+        let tong = 0
+        let tich = 1
+        let tb = 0
+        let arr = n.split(",")
+        console.log(arr)
+        for (let i = 0; i < arr.length; i++) {
+            tong += parseInt(arr[i])
+            tich *= arr[i]
+
+        }
+        tb += tong/arr.length
+        document.getElementById("ketqua").innerHTML = "Tổng là " + tong + "<br>" + "Tích là " + tich + "<br>" + "Trung bình là " + tb
+    }
+</script>
+</body>
+</html>
